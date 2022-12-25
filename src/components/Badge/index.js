@@ -14,6 +14,7 @@ const Badge = ({ type }) => {
           color={"#D1A713"}
           fontWeight={500}
           textTransform={"capitalize"}
+          maxW={"72.27px"}
         >
           {type}
         </Box>
@@ -27,6 +28,7 @@ const Badge = ({ type }) => {
           fontWeight={500}
           color={"#10AA69"}
           textTransform={"capitalize"}
+          maxW={"72.27px"}
         >
           {" "}
           {type}
@@ -41,6 +43,7 @@ const Badge = ({ type }) => {
           fontWeight={500}
           color={"#EE1717"}
           textTransform={"capitalize"}
+          maxW={"72.27px"}
         >
           {" "}
           {type}

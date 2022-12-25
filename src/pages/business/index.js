@@ -8,6 +8,7 @@ import Overview from "./overview";
 import Details from "./details";
 import Products from "./products";
 import Orders from "./orders";
+import Subscription from "./subscription";
 
 const Business = () => {
   const tab = [
@@ -25,10 +26,11 @@ const Business = () => {
           editIcon={<Edit />}
           dangerText={"Block business"}
           dangerIcon={<Forbidden />}
+          show={true}
         />
 
         <Box mt={"32px"}>
-          <Tabs variant="unstyled" defaultIndex={3}>
+          <Tabs variant="unstyled" defaultIndex={4}>
             <TabList
               border="0.5px solid #D9D8DA"
               pt="20px"
@@ -64,6 +66,9 @@ const Business = () => {
               </TabPanel>
               <TabPanel>
                 <Orders />
+              </TabPanel>
+              <TabPanel>
+                <Subscription />
               </TabPanel>
             </TabPanels>
           </Tabs>

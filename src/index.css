@@ -4,6 +4,7 @@ body {
   margin: 0;
   font-family: "Barlow", sans-serif;
   font-weight: 400;
+  color: #2b292f;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-y: hidden;

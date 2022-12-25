@@ -15,6 +15,9 @@ import {
   Businesses,
   Business,
   Subscriptions,
+  Subscription,
+  Orders,
+  Transactions,
 } from "pages";
 
 const App = () => {
@@ -34,12 +37,10 @@ const App = () => {
           <Route path="/dashboard" exact element={<Dashboard />} />
           <Route path="/businesses" exact element={<Businesses />} />
           <Route path="/businesses/:id" exact element={<Business />} />
+          <Route path="/businesses/orders/:id" exact element={<Orders />} />
           <Route path="/subscriptions" exact element={<Subscriptions />} />
-          <Route
-            path="/subscriptions/:plan"
-            exact
-            element={<Subscriptions />}
-          />
+          <Route path="/transactions" exact element={<Transactions />} />
+          <Route path="/subscriptions/:plan" exact element={<Subscription />} />
           <Route
             exact
             path="/"

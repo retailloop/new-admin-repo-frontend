@@ -8,3 +8,6 @@ export { default as Badge } from "./Badge";
 export { default as Subheader } from "./Subheader";
 export { default as Progressbar } from "./Progressbar";
 export { default as SubCard } from "./SubCard";
+export { default as SubContent } from "./SubContent";
+export { default as WalletCard } from "./WalletCard";
+export { default as Modal } from "./Modal";

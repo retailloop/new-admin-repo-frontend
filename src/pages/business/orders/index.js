@@ -16,7 +16,13 @@ const Orders = () => {
     },
   ];
   return (
-    <Box border={"0.5px solid #D9D8DA"} borderRadius={"10px"}>
+    <Box
+      border={"0.5px solid #D9D8DA"}
+      borderRadius={"10px"}
+      maxW="100%"
+      overflowX={"auto"}
+      whiteSpace={"nowrap"}
+    >
       <table>
         <thead>
           <tr>
@@ -63,7 +69,7 @@ const Orders = () => {
                 </td>
                 <td>
                   <Link
-                    to="/"
+                    to={`/businesses/orders/${i}`}
                     style={{
                       color: "#3F12C4",
                       fontSize: "12px",

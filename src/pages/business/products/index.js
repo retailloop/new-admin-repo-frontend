@@ -28,7 +28,13 @@ const Products = () => {
     },
   ];
   return (
-    <Box border={"0.5px solid #D9D8DA"} borderRadius={"10px"}>
+    <Box
+      border={"0.5px solid #D9D8DA"}
+      borderRadius={"10px"}
+      maxW="100%"
+      overflowX={"auto"}
+      whiteSpace={"nowrap"}
+    >
       <table>
         <thead>
           <tr>

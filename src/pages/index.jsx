@@ -7,3 +7,6 @@ export { default as Dashboard } from "./dashboard";
 export { default as Businesses } from "./businesses";
 export { default as Business } from "./business";
 export { default as Subscriptions } from "./subscriptions";
+export { default as Subscription } from "./subscription";
+export { default as Orders } from "./orders";
+export { default as Transactions } from "./transactions";

@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Text, Button, Flex } from "@chakra-ui/react";
 import { Link, useLocation } from "react-router-dom";
 
-const Subheader = ({ title, dangerIcon, editIcon, dangerText }) => {
+const Subheader = ({ title, dangerIcon, editIcon, dangerText, show }) => {
   const location = useLocation();
 
   return (
@@ -29,49 +29,62 @@ const Subheader = ({ title, dangerIcon, editIcon, dangerText }) => {
               {location?.pathname.split("/")[1]}
             </Text>
           </Link>
+          {!show && (
+            <Text
+              color={"#605D66"}
+              fontSize={"14px"}
+              fontWeight={500}
+              textTransform={"capitalize"}
+            >
+              Business Details
+            </Text>
+          )}
+
           <Text fontSize={"24px"} fontWeight={600} textTransform={"capitalize"}>
             {title}
           </Text>
         </Box>
 
-        <Box
-          display="flex"
-          flexDirection={"row"}
-          gap={"16px"}
-          alignItems="center"
-        >
-          <Button
-            variant="outline"
-            leftIcon={dangerIcon}
-            fontSize={"14px"}
-            fontWeight={600}
-            color={"#EE1717"}
-            bg={"transparent"}
-            outline="1px solid #EE1717"
-            border="none"
-            borderRadius={"10px"}
-            textTransform={"capitalize"}
-            _hover={{
-              background: "none",
-            }}
+        {show && (
+          <Box
+            display="flex"
+            flexDirection={"row"}
+            gap={"16px"}
+            alignItems="center"
           >
-            {dangerText}
-          </Button>
-          <Button
-            variant="solid"
-            leftIcon={editIcon}
-            fontSize={"14px"}
-            fontWeight={600}
-            color={"#fff"}
-            bg={"#3F12C4"}
-            borderRadius={"10px"}
-            _hover={{
-              background: "#3F12C4",
-            }}
-          >
-            Edit{" "}
-          </Button>
-        </Box>
+            <Button
+              variant="outline"
+              leftIcon={dangerIcon}
+              fontSize={"14px"}
+              fontWeight={600}
+              color={"#EE1717"}
+              bg={"transparent"}
+              outline="1px solid #EE1717"
+              border="none"
+              borderRadius={"10px"}
+              textTransform={"capitalize"}
+              _hover={{
+                background: "none",
+              }}
+            >
+              {dangerText}
+            </Button>
+            <Button
+              variant="solid"
+              leftIcon={editIcon}
+              fontSize={"14px"}
+              fontWeight={600}
+              color={"#fff"}
+              bg={"#3F12C4"}
+              borderRadius={"10px"}
+              _hover={{
+                background: "#3F12C4",
+              }}
+            >
+              Edit{" "}
+            </Button>
+          </Box>
+        )}
       </Flex>
     </Box>
   );
