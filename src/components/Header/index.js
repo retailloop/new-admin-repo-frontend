@@ -8,8 +8,9 @@ import {
   InputLeftElement,
 } from "@chakra-ui/react";
 import { AddCircle, Sort, Export, Search } from "assets/svg";
+import { Link } from "react-router-dom";
 
-const Header = ({ title, handleChange, btnTitle, show, sub }) => {
+const Header = ({ title, handleChange, btnTitle, show, sub, link }) => {
   return (
     <Box
       display={"flex"}
@@ -76,20 +77,22 @@ const Header = ({ title, handleChange, btnTitle, show, sub }) => {
         )}
 
         {show && (
-          <Button
-            w="100%"
-            border="none"
-            color="#fff"
-            bg="#3F12C4"
-            leftIcon={<AddCircle />}
-            variant="solid"
-            fontSize="14px"
-            fontWeight={600}
-            borderRadius={"10px"}
-            _hover={{ background: "#3F12C4" }}
-          >
-            {btnTitle}
-          </Button>
+          <Link to={link}>
+            <Button
+              w="100%"
+              border="none"
+              color="#fff"
+              bg="#3F12C4"
+              leftIcon={<AddCircle />}
+              variant="solid"
+              fontSize="14px"
+              fontWeight={600}
+              borderRadius={"10px"}
+              _hover={{ background: "#3F12C4" }}
+            >
+              {btnTitle}
+            </Button>
+          </Link>
         )}
       </Box>
     </Box>

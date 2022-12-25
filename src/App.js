@@ -18,6 +18,7 @@ import {
   Subscription,
   Orders,
   Transactions,
+  Plan,
 } from "pages";
 
 const App = () => {
@@ -39,6 +40,7 @@ const App = () => {
           <Route path="/businesses/:id" exact element={<Business />} />
           <Route path="/businesses/orders/:id" exact element={<Orders />} />
           <Route path="/subscriptions" exact element={<Subscriptions />} />
+          <Route path="/subscriptions/create/plan" exact element={<Plan />} />
           <Route path="/transactions" exact element={<Transactions />} />
           <Route path="/subscriptions/:plan" exact element={<Subscription />} />
           <Route

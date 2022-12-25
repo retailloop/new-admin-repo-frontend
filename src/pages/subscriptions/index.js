@@ -41,6 +41,7 @@ const Subscriptions = () => {
           show={true}
           btnTitle="Add Plan"
           sub={true}
+          link={`/subscriptions/create/plan`}
         />
 
         <Box

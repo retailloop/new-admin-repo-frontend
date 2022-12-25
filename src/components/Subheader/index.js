@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Text, Button, Flex } from "@chakra-ui/react";
 import { Link, useLocation } from "react-router-dom";
 
-const Subheader = ({ title, dangerIcon, editIcon, dangerText, show }) => {
+const Subheader = ({ title, dangerIcon, editIcon, dangerText, show, hide }) => {
   const location = useLocation();
 
   return (
@@ -29,7 +29,7 @@ const Subheader = ({ title, dangerIcon, editIcon, dangerText, show }) => {
               {location?.pathname.split("/")[1]}
             </Text>
           </Link>
-          {!show && (
+          {hide && (
             <Text
               color={"#605D66"}
               fontSize={"14px"}
