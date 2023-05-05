@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import logo from "assets/logo.svg";
 import { useNavigate } from "react-router-dom";
-import { Box, Text, Input, Button, Image } from "@chakra-ui/react";
+import { Box, Text, Button, Image, HStack } from "@chakra-ui/react";
+import { PinInput, PinInputField } from "@chakra-ui/react";
 
 const Verification = () => {
   const [text1, setText1] = useState("");
@@ -14,9 +15,9 @@ const Verification = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const result = text1.concat(text2, text3, text4, text5, text6);
+    const pin = text1.concat(text2, text3, text4, text5, text6);
     navigate("/dashboard");
-    console.log(result);
+    console.log(pin);
   };
   return (
     <Box>
@@ -26,72 +27,16 @@ const Verification = () => {
           Enter Verification OTP
         </Text>
         <Box display={"flex"} flexDir={"row"} flexWrap={"wrap"} gap={"8px"}>
-          <Input
-            border="1px solid #D9D8DA"
-            w="40px"
-            h="40px"
-            p={"2px"}
-            fontWeight={700}
-            textAlign={"center"}
-            onChange={(e) => setText1(e.target.value)}
-            fontSize={"24px"}
-            required
-          />
-          <Input
-            border="1px solid #D9D8DA"
-            w="40px"
-            h="40px"
-            p={"2px"}
-            fontWeight={700}
-            textAlign={"center"}
-            onChange={(e) => setText2(e.target.value)}
-            fontSize={"24px"}
-            required
-          />
-          <Input
-            border="1px solid #D9D8DA"
-            w="40px"
-            h="40px"
-            p={"2px"}
-            fontWeight={700}
-            textAlign={"center"}
-            onChange={(e) => setText3(e.target.value)}
-            fontSize={"24px"}
-            required
-          />
-          <Input
-            border="1px solid #D9D8DA"
-            w="40px"
-            h="40px"
-            p={"2px"}
-            fontWeight={700}
-            textAlign={"center"}
-            onChange={(e) => setText4(e.target.value)}
-            fontSize={"24px"}
-            required
-          />
-          <Input
-            border="1px solid #D9D8DA"
-            w="40px"
-            h="40px"
-            p={"2px"}
-            fontWeight={700}
-            textAlign={"center"}
-            onChange={(e) => setText5(e.target.value)}
-            fontSize={"24px"}
-            required
-          />
-          <Input
-            border="1px solid #D9D8DA"
-            w="40px"
-            h="40px"
-            p={"2px"}
-            fontWeight={700}
-            textAlign={"center"}
-            onChange={(e) => setText6(e.target.value)}
-            fontSize={"24px"}
-            required
-          />
+          <HStack>
+            <PinInput otp border="1px solid #D9D8DA">
+              <PinInputField onChange={(e) => setText1(e.target.value)} />
+              <PinInputField onChange={(e) => setText2(e.target.value)} />
+              <PinInputField onChange={(e) => setText3(e.target.value)} />
+              <PinInputField onChange={(e) => setText4(e.target.value)} />
+              <PinInputField onChange={(e) => setText5(e.target.value)} />
+              <PinInputField onChange={(e) => setText6(e.target.value)} />
+            </PinInput>
+          </HStack>
         </Box>
 
         <Text

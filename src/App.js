@@ -19,6 +19,7 @@ import {
   Orders,
   Transactions,
   Plan,
+  PageNotFound,
 } from "pages";
 
 const App = () => {
@@ -43,11 +44,13 @@ const App = () => {
           <Route path="/subscriptions/create/plan" exact element={<Plan />} />
           <Route path="/transactions" exact element={<Transactions />} />
           <Route path="/subscriptions/:plan" exact element={<Subscription />} />
+          <Route path="/404" element={<PageNotFound />} />
           <Route
             exact
             path="/"
             element={<Navigate to="/session/new" replace />}
           />
+          <Route path="*" element={<Navigate to="/404" />} />
         </Routes>
       </Router>
     </Suspense>
