@@ -5,7 +5,6 @@ import {
   Card,
   Report,
   Setting,
-  Box,
 } from "assets/svg";
 
 export const routes = [
@@ -26,12 +25,6 @@ export const routes = [
     link: "/transactions",
     icon: <Transaction />,
     iconActive: <Transaction color={"#3F12C4"} />,
-  },
-  {
-    name: "Product usage",
-    link: "/product_usage",
-    icon: <Box />,
-    iconActive: <Box color={"#3F12C4"} />,
   },
   {
     name: "subscriptions",
